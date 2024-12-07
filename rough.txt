@@ -1,0 +1,51 @@
+
+<?php 
+        if (empty($userid)){
+            $userid=$_POST['user_email'];
+        }
+
+    echo "userid is (username):".$userid;
+    
+    $timestamp = time();
+    
+    $user_name=$user_id;
+    $user_id_timestamp= $user_name + $timestamp;
+    $password=$_POST['user_password'];
+    $hashed_password=password_hash($password,PASSWORD_DEFAULT);
+
+
+    $query="INSERT INTO `users` (`userid`,`username`, `password`, `date`) VALUES ('$user_id_timestamp','$user_name', '$hashed_password', DATE_FORMAT(CURDATE(), '%d %M %Y'))";
+    $result=mysqli_query($conn,$query);
+    if($result){
+        echo "submitted";
+        header("Location: mainpage.php?name=" . urlencode($user_name)."&userid=" . urlencode($user_id_timestamp));
+    }
+    else{
+        echo "someproblem" . mysqli_connect_error($conn);
+    }
+
+    }
+
+
+    // intering the user in tweets database
+    $query2="INSERT INTO `tweets`(`userid`, `tweet_txt`, `tweet_like`, `tweet_cmt`) VALUES ('$userid','NULL','NULL','NULL')";
+    $result2=mysqli_query($conn,$query2);
+    if($result2){
+        echo "user successfully added in tweets database";
+    }else{
+        echo "problem adding user to tweets db";
+    }
+
+    //setting default dp of the user when signup
+    $query3="INSERT INTO `user_images`(`userid`, `profile_img`, `banner_img`) VALUES ('$userid','../images/default_dp.jpeg','../images/default_banner.png')";
+    $result3=mysqli_query($conn,$query3);
+    if($result3){
+        echo "user default dp has been set ";
+    }else{
+        echo "problem setting user default dp has been set";
+    }
+
+
+?>
+
+

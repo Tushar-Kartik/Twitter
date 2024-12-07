@@ -1,0 +1,3 @@
+?userid=<?php echo $_GET['userid']; ?>&name=<?php echo $_GET['name']; ?>
+
+header("Location: ../mainpage.php?userid=$userid&name=$name");

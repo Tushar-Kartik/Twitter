@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.tweet-box {
+    margin-top: 50px;
+    border-radius: 5px;
+    width: 50%;
+    height: 200px;
+    /* border: 2px solid blue; */
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgb(64, 185, 233);
+}
+.blu-btn{
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #21a6f3;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+
+}
+.disp-name{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.image-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    
+}
+
+.mind-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.actions {
+    display: flex;
+    /* justify-content: space-around; */
+}

@@ -1,0 +1,66 @@
+/* The side navigation menu */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sidenav {
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 15;
+    top: 50%;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style the form inside the sidenav */
+.sidenav form {
+    padding: 20px;
+    color: black;
+}
+
+/* Style the input fields */
+.sidenav input[type="text"], .sidenav input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+.sidenav input[type="submit"] {
+    background-color: white;
+    color: #21a6f3;
+    border: 1px solid #21a6f3;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.sidenav input[type="submit"]:hover {
+    background-color: #21a6f3;
+    color: white;
+}
